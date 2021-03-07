@@ -3,6 +3,8 @@ import {Injector, NgModule} from '@angular/core';
 
 import {NicicoTicketComponent} from './nicico-ticket/nicico-ticket.component';
 import {createCustomElement} from '@angular/elements';
+import {AngularMaterialModule} from './shared/angular-material/angular-material.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import {createCustomElement} from '@angular/elements';
   ],
   entryComponents: [NicicoTicketComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    AngularMaterialModule
   ],
   providers: []
 })

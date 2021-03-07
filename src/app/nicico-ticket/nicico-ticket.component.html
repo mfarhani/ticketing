@@ -1,2 +1,17 @@
-<button class="ticket-btn" (click)="onTicketClick()">click</button>
-
+<div class="nicico-ticketing" *ngIf="show">
+  <div class="nicico-ticketing-btn-wrapper" [ngClass]="'btn-'+btnIndexes[0]">
+    <button mat-icon-button class="nicico-ticketing-btn" (click)="changeIndex(1)">
+      <mat-icon class="nicico-icon" svgIcon="ticket"></mat-icon>
+    </button>
+  </div>
+  <div class="nicico-ticketing-btn-wrapper" [ngClass]="'btn-'+btnIndexes[1]">
+    <button mat-icon-button class="nicico-ticketing-btn" (click)="changeIndex(2)">
+      <mat-icon class="nicico-icon" svgIcon="folder"></mat-icon>
+    </button>
+  </div>
+  <div class="nicico-ticketing-btn-wrapper" [ngClass]="'btn-'+btnIndexes[2]">
+    <button mat-icon-button class="nicico-ticketing-btn" (click)="changeIndex(3)">
+      <mat-icon class="nicico-icon" svgIcon="chat"></mat-icon>
+    </button>
+  </div>
+</div>
