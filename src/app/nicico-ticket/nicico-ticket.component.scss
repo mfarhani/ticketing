@@ -13,6 +13,7 @@
   }
 
   .nicico-ticketing-btn-wrapper {
+    z-index: 1001;
     position: absolute;
     width: 40px;
     height: 40px;
@@ -37,12 +38,13 @@
       }
     }
 
-    &.btn-1 {
+    &.btn-1, &.ticket-btn {
       @include nicico-btn;
       width: 54px;
       height: 54px;
       left: 0;
       top: 0;
+      z-index: 1002;
 
       .nicico-ticketing-btn {
         background: linear-gradient(135deg, #FF9313 15%, #FFB45B 65%);
@@ -59,14 +61,15 @@
 
     &.btn-2 {
       @include nicico-btn;
-      left: 60px;
-      top: 15px;
+      left: 5px;
+      top: 0;
+      transition-delay: .1s;
     }
 
     &.btn-3 {
       @include nicico-btn;
-      left: 35px;
-      top: 53px;
+      left: 5px;
+      top: 0;
     }
 
     .nicico-ticketing-btn {
@@ -82,6 +85,37 @@
       .nicico-icon {
         width: 20px;
         height: 20px;
+      }
+    }
+  }
+
+  &.expanded {
+    .nicico-ticketing-btn-wrapper {
+      transition: .2s;
+
+      .nicico-icon {
+        width: 17px !important;
+        height: 17px !important;
+      }
+
+      &.btn-1 {
+        .nicico-icon {
+          width: 22px !important;
+          height: 22px !important;
+        }
+      }
+
+      &.btn-2 {
+        @include nicico-btn;
+        left: 60px !important;
+        top: 15px !important;
+      }
+
+      &.btn-3 {
+        @include nicico-btn;
+        left: 35px !important;
+        top: 53px !important;
+        transition-delay: .1s;
       }
     }
   }

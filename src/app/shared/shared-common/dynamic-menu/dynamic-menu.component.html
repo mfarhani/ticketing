@@ -1,0 +1,13 @@
+<button [matMenuTriggerFor]="menu" class="menu-btn"></button>
+<mat-menu #menu="matMenu" class="dynamic-menu" yPosition="above">
+  <div>
+    <div class="triangle"></div>
+    <div class="menu-header">
+      <h3>{{title}}</h3>
+      <mat-icon svgIcon="close"></mat-icon>
+    </div>
+    <div class="menu-body">
+      <div [customComponent]="customComponent"></div>
+    </div>
+  </div>
+</mat-menu>

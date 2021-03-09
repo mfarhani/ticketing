@@ -1,0 +1,110 @@
+@import "src/assets/scss/variables";
+
+.menu-btn {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+::ng-deep {
+  .mat-elevation-z4 {
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .mat-menu-panel {
+    overflow: hidden !important;
+  }
+
+  .mat-menu-content {
+    padding-top: 0 !important;
+  }
+
+  .cdk-overlay-pane {
+    position: relative !important;
+    width: 540px !important;
+    max-width: 580px !important;
+    left: 282px;
+    bottom: 20px;
+  }
+
+  .clickable {
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .dynamic-menu {
+    border-radius: $primary-border-radius !important;
+    width: 580px !important;
+    max-width: 580px !important;
+    height: 500px !important;
+
+    .menu-header {
+      height: 48px;
+      background: #324458;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        margin: 0;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      mat-icon {
+        position: absolute;
+        left: 20px;
+        color: white;
+      }
+    }
+
+    .menu-body {
+      max-height: 28.5rem;
+      overflow-y: auto;
+    }
+
+    .menu-footer {
+      text-align: center;
+      color: gray;
+
+      h3 {
+        margin: 0;
+        margin-bottom: -5px;
+        cursor: pointer;
+      }
+    }
+
+    .triangle {
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -14px;
+      left: 253px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid white;
+      filter: drop-shadow(0 5px 4px rgba(0, 0, 0, .2));
+    }
+
+    .dynamic-menu-item {
+      font-size: 13px;
+      padding-right: 1.5rem;
+
+      &:hover {
+        mat-icon, span {
+          color: darken(#bcbccb, 40) !important;
+        }
+      }
+
+      mat-icon {
+        width: 30px;
+      }
+
+      span {
+        color: #959595;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ $baseFontFamily: "YekanWeb";
 $boldFontFamily: YekanBold;
 $animationDuration: .2s;
 $primary: #FE9D2A;
-$primary-border-radius: 5px;
+$primary-border-radius: 15px;
 $primary-border-bottom: 1px solid rgba(112, 112, 112, .31);
 
 @mixin primary-shadow() {

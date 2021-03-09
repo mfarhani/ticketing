@@ -3,8 +3,9 @@ import {Injector, NgModule} from '@angular/core';
 
 import {NicicoTicketComponent} from './nicico-ticket/nicico-ticket.component';
 import {createCustomElement} from '@angular/elements';
-import {AngularMaterialModule} from './shared/angular-material/angular-material.module';
 import {HttpClientModule} from '@angular/common/http';
+import {SharedModule} from './shared/shared.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,8 +14,9 @@ import {HttpClientModule} from '@angular/common/http';
   entryComponents: [NicicoTicketComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
-    AngularMaterialModule
+    SharedModule
   ],
   providers: []
 })
