@@ -3,8 +3,8 @@
   <div>
     <div class="triangle"></div>
     <div class="menu-header">
-      <h3>{{title}}</h3>
-      <mat-icon svgIcon="close"></mat-icon>
+      <h3>{{title|translate}}</h3>
+      <mat-icon svgIcon="close" (click)="close()"></mat-icon>
     </div>
     <div class="menu-body">
       <div [customComponent]="customComponent"></div>

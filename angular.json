@@ -32,7 +32,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/scss/variables.scss"
+              "src/assets/scss/variables.scss",
+              "src/assets/scss/fonts.scss"
             ],
             "scripts": []
           },

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { IconService } from '../core/services/service/icon.service';
 import { DynamicMenuComponent } from '../shared/shared-common/dynamic-menu/dynamic-menu.component';
 
@@ -11,13 +12,21 @@ export class NicicoTicketComponent implements OnInit {
   @ViewChild('menu') menu: DynamicMenuComponent = new DynamicMenuComponent();
   public show = false;
   public btnIndexes = [1, 2, 3];
-  title = 'test';
+  title = 'nicico.ticket.new';
   public expandBtn = false;
 
-  constructor(private iconService: IconService) {
+  constructor(
+    private iconService: IconService,
+    private translate: TranslateService
+  ) {
     iconService.registerIcons().subscribe((res) => {
       this.show = true;
     });
+    this.iconService.registerIcons();
+    this.translate.addLangs(['fa']);
+    this.translate.setDefaultLang('fa');
+    const browserLang = translate.getBrowserLang();
+    this.translate.use(browserLang.match(/fa/) ? browserLang : 'fa');
   }
 
   ngOnInit(): void {}

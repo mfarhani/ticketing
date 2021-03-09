@@ -18,13 +18,14 @@ export class DynamicMenuComponent implements AfterViewInit {
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   @Input() title = '';
   @Input() customComponent: any;
-  @Output() onMenuClosed: EventEmitter<void> = new EventEmitter<void>();
+  @Output() menuClosed: EventEmitter<void> = new EventEmitter<void>();
+  @Output() closeClick: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {}
 
   ngAfterViewInit(): void {
     this.trigger.menuClosed.subscribe(() => {
-      this.onMenuClosed.emit();
+      this.menuClosed.emit();
     });
   }
 
@@ -37,4 +38,8 @@ export class DynamicMenuComponent implements AfterViewInit {
   }
 
   onHeaderClick(): void {}
+
+  close(): void {
+    this.closeClick.emit();
+  }
 }
