@@ -17,7 +17,7 @@ export class DynamicMenuComponent implements AfterViewInit {
   // @ts-ignore
   @ViewChild(MatMenuTrigger) trigger: MatMenuTrigger;
   @Input() title = '';
-  @Input() customComponent: any;
+  @Input() entryComponent: any;
   @Output() menuClosed: EventEmitter<void> = new EventEmitter<void>();
   @Output() closeClick: EventEmitter<void> = new EventEmitter<void>();
 

@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NicicoTicketComponent } from './nicico-ticket/nicico-ticket.component';
+import { TicketFormComponent } from './nicico-ticket/ticket-form/ticket-form.component';
 import { SharedModule } from './shared/shared.module';
 
 export function createTranslateLoader(http: HttpClient): TranslateLoader {
@@ -13,7 +14,7 @@ export function createTranslateLoader(http: HttpClient): TranslateLoader {
 }
 
 @NgModule({
-  declarations: [NicicoTicketComponent],
+  declarations: [NicicoTicketComponent, TicketFormComponent],
   entryComponents: [NicicoTicketComponent],
   imports: [
     BrowserModule,

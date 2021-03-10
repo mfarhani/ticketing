@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IconService } from '../core/services/service/icon.service';
 import { DynamicMenuComponent } from '../shared/shared-common/dynamic-menu/dynamic-menu.component';
+import { TicketFormComponent } from './ticket-form/ticket-form.component';
 
 @Component({
   selector: 'nicico-ticket',
@@ -13,6 +14,7 @@ export class NicicoTicketComponent implements OnInit {
   public show = false;
   public btnIndexes = [1, 2, 3];
   title = 'nicico.ticket.new';
+  public ticketForm = TicketFormComponent;
   public expandBtn = false;
 
   constructor(

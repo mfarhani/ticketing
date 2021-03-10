@@ -1,0 +1,17 @@
+.nicico-select {
+  height: 42px;
+  line-height: 42px;
+  border-color: #BFBFBF !important;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 100%;
+}
+
+::ng-deep {
+  .select-panel {
+    margin-top: 44px;
+    width: 483px !important;
+    min-width: 200px !important;
+    max-width: 100% !important;
+  }
+}

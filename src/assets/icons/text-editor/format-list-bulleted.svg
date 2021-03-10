@@ -1,0 +1,12 @@
+<svg id="format_list_bulleted-24px" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_11032" data-name="Group 11032">
+    <rect id="Rectangle_11546" data-name="Rectangle 11546" width="24" height="24" fill="none"/>
+  </g>
+  <g id="Group_11035" data-name="Group 11035" transform="translate(3 4.5)">
+    <g id="Group_11034" data-name="Group 11034">
+      <g id="Group_11033" data-name="Group 11033">
+        <path id="Path_19119" data-name="Path 19119" d="M19.5,10.5A1.5,1.5,0,1,1,18,12,1.5,1.5,0,0,1,19.5,10.5Zm0-6A1.5,1.5,0,1,1,18,6,1.5,1.5,0,0,1,19.5,4.5Zm0,12A1.5,1.5,0,1,1,18,18,1.5,1.5,0,0,1,19.5,16.5Zm-4,2.5H3.5a1,1,0,0,1-1-1h0a1,1,0,0,1,1-1h12a1,1,0,0,1,1,1h0A1,1,0,0,1,15.5,19Zm0-6H3.5a1,1,0,0,1-1-1h0a1,1,0,0,1,1-1h12a1,1,0,0,1,1,1h0A1,1,0,0,1,15.5,13Zm1-7h0a1,1,0,0,1-1,1H3.5a1,1,0,0,1-1-1h0a1,1,0,0,1,1-1h12A1,1,0,0,1,16.5,6Z" transform="translate(-2.5 -4.5)" fill="#bdc3c9"/>
+      </g>
+    </g>
+  </g>
+</svg>

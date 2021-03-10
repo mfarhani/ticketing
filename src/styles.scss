@@ -46,3 +46,50 @@ body {
 * {
   font-family: "Yekan", "YekanWeb", YekanWeb, Tahoma, Arial, sans-serif !important;
 }
+
+.mat-form-field {
+  width: 100%;
+  height: 42px !important;
+}
+
+.mat-form-field-flex {
+  height: 42px !important;
+  padding-top: 0 !important;
+}
+
+.mat-form-field-infix {
+  padding-top: 0 !important;
+  border-top: 0 !important;
+}
+
+.mat-select-arrow-wrapper {
+  transform: none !important;
+}
+
+.mat-form-field-label-wrapper {
+  line-height: 42px;
+  height: 28px !important;
+  top: 0;
+
+  .mat-form-field-label {
+    top: 5px;
+  }
+}
+
+.mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label,
+.mat-form-field-appearance-outline.mat-form-field-can-float .mat-input-server:focus
++ .mat-form-field-label-wrapper .mat-form-field-label {
+  transform: translateY(-12px) scale(0.75);
+}
+
+formly-field {
+  width: 100%;
+  margin: .5rem 0;
+}
+
+formly-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+

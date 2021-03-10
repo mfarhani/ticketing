@@ -4,6 +4,8 @@
   position: relative;
   width: 105px;
   height: 100px;
+  direction: rtl;
+  overflow: hidden;
   @mixin nicico-btn {
     transition: .2s;
     &:active {

@@ -1,0 +1,12 @@
+<h4 mat-dialog-title translate>{{config?.title || 'nicico.confirmDialog.title'}}</h4>
+<div mat-dialog-content>
+  <p translate>{{config?.message || 'nicico.confirmDialog.message'}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button type="button" [mat-dialog-close]="true">
+    <span translate>{{config?.acceptLabel || 'nicico.confirmDialog.acceptLabel'}}</span>
+  </button>
+  <button mat-flat-button color="warn" [mat-dialog-close]="false">
+    &nbsp;<span translate>{{config?.rejectLabel || 'nicico.confirmDialog.rejectLabel'}}</span>
+  </button>
+</div>

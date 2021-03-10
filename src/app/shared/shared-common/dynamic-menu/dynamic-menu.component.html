@@ -6,8 +6,8 @@
       <h3>{{title|translate}}</h3>
       <mat-icon svgIcon="close" (click)="close()"></mat-icon>
     </div>
-    <div class="menu-body">
-      <div [customComponent]="customComponent"></div>
+    <div class="menu-body" (click)="$event.stopPropagation()">
+      <div [customComponent]="entryComponent"></div>
     </div>
   </div>
 </mat-menu>
