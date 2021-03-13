@@ -1,6 +1,27 @@
 <mat-form-field appearance="outline" class="nicico-text-editor">
   <mat-label>test</mat-label>
-  <textarea class="nicico-text-editor-text-area" [placeholder]="key.toString()" matInput rows="6"
+  <textarea #textEditor class="nicico-text-editor-text-area" [placeholder]="key.toString()" matInput rows="6"
             [matTextareaAutosize]="false"></textarea>
-  <div class="nicico-text-editor-tool-box"></div>
+  <div class="nicico-text-editor-tool-box">
+    <div class="tool-box-section">
+      <mat-icon class="tool-box-icon" svgIcon="align-left" (click)="formatText(0)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="align-right" (click)="formatText(1)"></mat-icon>
+    </div>
+    <div class="tool-box-section">
+      <mat-icon class="tool-box-icon" svgIcon="format-list-numbered" (click)="formatText(2)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-list-bulleted" (click)="formatText(3)"></mat-icon>
+    </div>
+    <div class="tool-box-section">
+      <mat-icon class="tool-box-icon" svgIcon="format-bold" (click)="formatText(4)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-italic" (click)="formatText(5)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-underlined" (click)="formatText(6)"></mat-icon>
+    </div>
+    <div class="tool-box-section">
+      <mat-icon class="tool-box-icon" svgIcon="format-color-text" (click)="formatText(7)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-size" (click)="formatText(8)"></mat-icon>
+    </div>
+    <div class="tool-box-section">
+      <mat-icon class="tool-box-icon" svgIcon="attachment"></mat-icon>
+    </div>
+  </div>
 </mat-form-field>
