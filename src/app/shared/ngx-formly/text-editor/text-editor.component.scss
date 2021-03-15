@@ -1,12 +1,14 @@
 .nicico-text-editor {
   height: 165px !important;
+  width: 100%;
 
   .nicico-text-editor-text-area {
-    top: 20px !important;
-    height: 120px;
+    height: 90px;
+    font-size: 12px;
   }
 
   .nicico-text-editor-tool-box {
+    margin-top: 10px;
     height: 45px;
     position: relative;
     bottom: 0;
@@ -42,6 +44,15 @@
     .mat-form-field, .mat-form-field-flex {
       height: 165px !important;
       background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 120px, #F5F5F5 120px, #F5F5F5 100%);
+    }
+  }
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float {
+  .nicico-text-editor-tool-box + .mat-form-field-label-wrapper {
+    .mat-form-field-label {
+      transform: translateY(-1.1em) scale(.75);
+      width: 133.33333%;
     }
   }
 }

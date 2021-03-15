@@ -37,7 +37,7 @@
     border-radius: $primary-border-radius !important;
     width: 580px !important;
     max-width: 580px !important;
-    height: 500px !important;
+    min-height: 500px !important;
 
     .menu-header {
       height: 48px;
@@ -62,7 +62,6 @@
     }
 
     .menu-body {
-      max-height: 28.5rem;
       margin: 1rem 2rem;
     }
 

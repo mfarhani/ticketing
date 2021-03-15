@@ -1,8 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
-  <g id="align-right" transform="translate(1 1)">
-    <line id="Line_993" data-name="Line 993" x1="14" transform="translate(4 4)" stroke="#cacfd4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <line id="Line_994" data-name="Line 994" x1="18"  stroke="#cacfd4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <line id="Line_995" data-name="Line 995" x1="18" transform="translate(0 8)"  stroke="#cacfd4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <line id="Line_996" data-name="Line 996" x1="14" transform="translate(4 12)"  stroke="#cacfd4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <g id="Group_11123" data-name="Group 11123" transform="translate(-536 3215)">
+    <g id="Rectangle_11649" data-name="Rectangle 11649" transform="translate(536 -3215)" stroke-width="1">
+      <rect width="20" height="2" rx="1" />
+      <rect x="0.5" y="0.5" width="19" height="1" rx="0.5" />
+    </g>
+    <g id="Rectangle_11650" data-name="Rectangle 11650" transform="translate(540 -3211)" stroke-width="1">
+      <rect width="16" height="2" rx="1" />
+      <rect x="0.5" y="0.5" width="15" height="1" rx="0.5" />
+    </g>
+    <g id="Rectangle_11651" data-name="Rectangle 11651" transform="translate(536 -3207)"   stroke-width="1">
+      <rect width="20" height="2" rx="1" />
+      <rect x="0.5" y="0.5" width="19" height="1" rx="0.5" />
+    </g>
+    <g id="Rectangle_11652" data-name="Rectangle 11652" transform="translate(540 -3203)"   stroke-width="1">
+      <rect width="16" height="2" rx="1" />
+      <rect x="0.5" y="0.5" width="15" height="1" rx="0.5" />
+    </g>
   </g>
 </svg>

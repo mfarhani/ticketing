@@ -1,9 +1,20 @@
-input {
-  height: 45px;
-  border-color: #BFBFBF !important;
-  border-radius: 5px;
-  border-width: 1px;
-  padding-right: 10px;
-  user-select: none;
-  outline: none;
+.nicico-text-box {
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-flex > .mat-form-field-infix {
+  padding: 0.4em 0 !important;
+}
+
+::ng-deep .mat-form-field-label-wrapper {
+  top: -1.5em;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float {
+  .mat-input-element + .mat-form-field-label-wrapper {
+    .mat-form-field-label {
+      transform: translateY(-1.1em) scale(.75);
+      width: 133.33333%;
+    }
+  }
 }
