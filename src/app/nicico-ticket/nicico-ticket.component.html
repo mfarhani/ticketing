@@ -20,6 +20,7 @@
       <mat-icon class="nicico-icon" svgIcon="chat"></mat-icon>
     </button>
   </div>
-  <nicico-dynamic-menu [title]="title" #menu (menuClosed)="collapseBtn()" [entryComponent]="ticketForm"
+  <nicico-dynamic-menu [title]="title" #menu (menuClosed)="collapseBtn()"
+                       [entryComponent]="ticketForm"
                        (closeClick)="collapseBtn()"></nicico-dynamic-menu>
 </div>

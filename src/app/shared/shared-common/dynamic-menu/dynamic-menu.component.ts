@@ -21,6 +21,8 @@ export class DynamicMenuComponent implements AfterViewInit {
   @Output() menuClosed: EventEmitter<void> = new EventEmitter<void>();
   @Output() closeClick: EventEmitter<void> = new EventEmitter<void>();
 
+  // tslint:disable-next-line:variable-name
+
   constructor() {}
 
   ngAfterViewInit(): void {

@@ -13,8 +13,13 @@ import {
 })
 export class CustomComponentDirective implements OnInit, AfterViewInit {
   // @ts-ignore
-  @Input() customComponent: any;
+  @Input() set customComponent(comp: any) {
+    this.component = comp;
+    this.renderComponent();
+  }
+
   @Input() data: any;
+  private component: any;
 
   constructor(
     public viewContainerRef: ViewContainerRef,
@@ -22,10 +27,15 @@ export class CustomComponentDirective implements OnInit, AfterViewInit {
   ) {}
 
   ngOnInit(): void {
-    if (this.customComponent) {
+    this.renderComponent();
+  }
+
+  renderComponent(): void {
+    if (this.component) {
       const componentFactory = this.componentFactoryResolver.resolveComponentFactory(
-        this.customComponent
+        this.component
       );
+      this.viewContainerRef.clear();
       const componentRef = this.viewContainerRef.createComponent(
         componentFactory
       );
