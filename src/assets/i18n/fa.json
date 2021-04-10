@@ -2,9 +2,11 @@
   "nicico": {
     "ticket": {
       "new": "ثبت تیکت جدید",
+      "submit": "ثبت",
       "submitTicketBtn": "ثبت تیکت جدید",
       "chatTitle": "چت آنلاین با کارشناس",
-      "tracking": "پیگیری تیکت‌ها"
+      "tracking": "پیگیری تیکت‌ها",
+      "submitCommentBtn": "ثبت نظر جدید"
     }
   }
 }

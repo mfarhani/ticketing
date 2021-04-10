@@ -16,6 +16,10 @@ export class Ticket implements ITicket {
     return 'ticket';
   }
 
+  public get submitTitle(): string {
+    return 'nicico.ticket.submitTicketBtn';
+  }
+
   public get fields(): FormlyFieldConfig[] {
     return Ticket.fields;
   }
