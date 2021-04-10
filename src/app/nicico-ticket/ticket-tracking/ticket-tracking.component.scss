@@ -1,0 +1,24 @@
+.ticket-tracking {
+  direction: rtl;
+
+  .ticket-tracking-header {
+    position: relative;
+    right: -2rem;
+    top: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 42px;
+    text-align: right;
+    width: calc(100% + 4rem);
+    background-color: #E9E9E9;
+    border-right: 7px solid #D80812;
+
+    .ticket-tracking-header-title {
+      color: #5D5D5D;
+      margin-right: 1.5rem;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+}

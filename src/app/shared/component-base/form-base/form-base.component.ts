@@ -10,11 +10,13 @@ export class FormBaseComponent<T extends IBaseModel> {
   public readonly options: Optional<FormlyFormOptions> = {};
   public readonly fields: Optional<FormlyFieldConfig[]>;
   public readonly entityName: Optional<string>;
+  public submitTitle: string;
 
   constructor(protected modelClass: Type<T>) {
     const tempModel = new modelClass();
     this.entityName = tempModel.entityName;
     this.fields = tempModel.fields;
     this.options = tempModel.options;
+    this.submitTitle = tempModel.submitTitle || 'nicico.ticket.submit';
   }
 }

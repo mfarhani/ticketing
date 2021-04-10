@@ -12,6 +12,10 @@ export class Comment implements IComment {
     return 'comment';
   }
 
+  public get submitTitle(): string {
+    return 'nicico.ticket.submitCommentBtn';
+  }
+
   public get fields(): FormlyFieldConfig[] {
     return Comment.fields;
   }

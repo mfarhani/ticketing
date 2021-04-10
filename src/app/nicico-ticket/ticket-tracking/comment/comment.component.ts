@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBaseComponent } from '../../../shared/component-base/form-base/form-base.component';
 import { IComment } from '../../models/comment/comment.interface';
+import { Comment } from '../../models/comment/comment.model';
 
 @Component({
   selector: 'nicico-comment',
