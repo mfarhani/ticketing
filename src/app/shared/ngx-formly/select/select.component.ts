@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { FieldType } from '@ngx-formly/core';
 import { IBaseModel } from '../../../core/base-models/contracts/base-model.interface';
 
@@ -12,8 +13,11 @@ export class SelectComponent extends FieldType implements OnInit {
     super();
   }
 
+  // @ts-ignore
+  formControl: FormControl;
+
   ngOnInit(): void {
-    console.log(this);
+    console.log(this.formControl.errors);
   }
 
   compareOption(p1: IBaseModel, p2: IBaseModel): boolean {

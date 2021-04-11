@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { FieldType } from '@ngx-formly/core';
 
 @Component({
@@ -11,7 +12,14 @@ export class TextBoxComponent extends FieldType implements OnInit {
     super();
   }
 
+  // @ts-ignore
+  formControl: FormControl;
+
   ngOnInit(): void {
+    console.log(this);
+  }
+
+  change() {
     console.log(this);
   }
 }

@@ -27,41 +27,51 @@ export class Ticket implements ITicket {
   public static get fields(): FormlyFieldConfig[] {
     const fields: FormlyFieldConfig[] = [
       {
-        key: 'Select',
+        key: 'ticket-group',
         type: 'nicico-select',
         templateOptions: {
-          label: 'select',
+          label: 'nicico.ticket.group',
           placeholder: 'placeholder',
           description: 'deactivate',
           required: true
         }
       },
       {
-        key: 'Select',
+        key: 'ticket-group-type',
         type: 'nicico-select',
         templateOptions: {
-          label: 'select',
+          label: 'nicico.ticket.groupType',
           placeholder: 'placeholder',
           description: 'deactivate',
           required: true
         }
       },
       {
-        key: 'Select',
+        key: 'ticket-type',
         type: 'nicico-select',
         templateOptions: {
-          label: 'select',
+          label: 'nicico.ticket.type',
           placeholder: 'placeholder',
           description: 'deactivate',
           required: true
         }
       },
       {
-        key: 'input',
+        key: 'ticket-priority',
+        type: 'nicico-select',
+        templateOptions: {
+          label: 'nicico.ticket.priority',
+          placeholder: 'placeholder',
+          description: 'deactivate',
+          required: true
+        }
+      },
+      {
+        key: 'ticket-topic',
         type: 'text',
         templateOptions: {
-          label: 'select',
-          placeholder: 'placeholder',
+          label: 'nicico.ticket.topic',
+          placeholder: 'nicico.ticket.topic',
           description: 'deactivate',
           required: true
         }

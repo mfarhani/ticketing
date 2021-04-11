@@ -6,7 +6,15 @@
       "submitTicketBtn": "ثبت تیکت جدید",
       "chatTitle": "چت آنلاین با کارشناس",
       "tracking": "پیگیری تیکت‌ها",
-      "submitCommentBtn": "ثبت نظر جدید"
+      "submitCommentBtn": "ثبت نظر جدید",
+      "group": "گروه‌بندی",
+      "groupType": "نوع گروه",
+      "type": "نوع",
+      "priority": "اولویت",
+      "topic": "موضوع تیکت"
+    },
+    "error": {
+      "required": "پر کردن این فیلد الزامیست"
     }
   }
 }

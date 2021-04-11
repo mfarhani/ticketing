@@ -19,4 +19,8 @@ export class FormBaseComponent<T extends IBaseModel> {
     this.options = tempModel.options;
     this.submitTitle = tempModel.submitTitle || 'nicico.ticket.submit';
   }
+
+  submit(): void {
+    console.log(this);
+  }
 }

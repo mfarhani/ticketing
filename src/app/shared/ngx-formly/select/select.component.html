@@ -1,9 +1,16 @@
 <mat-form-field appearance="outline" class="nicico-select">
-  <mat-label>test</mat-label>
-  <mat-select panelClass="select-panel" [compareWith]="compareOption">
-    <mat-option>aewsfsf</mat-option>
-    <mat-option>aewsfsf</mat-option>
-    <mat-option>aewsfsf</mat-option>
-    <mat-option>aewsfsf</mat-option>
+  <mat-label>{{field?.templateOptions?.label!|translate}}
+    <span *ngIf="formControl?.errors?.required!">*</span>
+  </mat-label>
+  <mat-select panelClass="select-panel" [compareWith]="compareOption" [formControl]="formControl"
+              [formlyAttributes]="field">
+    <mat-option value="0">گزینه یک</mat-option>
+    <mat-option value="1">گزینه دو</mat-option>
+    <mat-option value="2">گزینه سه</mat-option>
+    <mat-option value="3">گزینه چهار</mat-option>
   </mat-select>
 </mat-form-field>
+<div class="error" *ngIf="formControl.touched">
+  <span class="error-message" *ngIf="formControl?.errors?.required" translate>nicico.error.required</span>
+</div>
+

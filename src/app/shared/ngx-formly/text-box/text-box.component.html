@@ -1,4 +1,10 @@
 <mat-form-field appearance="outline" class="nicico-text-box">
-  <mat-label>test</mat-label>
-  <input type="text" [placeholder]="key.toString()" matInput>
+  <mat-label>{{field?.templateOptions?.label!|translate}}
+    <span *ngIf="formControl?.errors?.required!">*</span>
+  </mat-label>
+  <input type="text" (input)="change()" [formlyAttributes]="field" [formControl]="formControl"
+         [placeholder]="field?.templateOptions?.placeholder!|translate" matInput>
 </mat-form-field>
+<div class="error" *ngIf="form.touched">
+  <span class="error-message" *ngIf="formControl?.errors?.required" translate>nicico.error.required</span>
+</div>
