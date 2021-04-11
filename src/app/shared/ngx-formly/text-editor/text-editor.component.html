@@ -1,29 +1,88 @@
 <mat-form-field appearance="outline" class="nicico-text-editor">
+
   <mat-label>test</mat-label>
-  <textarea #textEditor class="nicico-text-editor-text-area" [placeholder]="key.toString()" matInput rows="4"
-            [matTextareaAutosize]="false"></textarea>
+
+  <textarea rows="4" class="nicico-text-editor-text-area"
+            matInput
+            #textEditor
+            [placeholder]="key.toString()"
+            [matTextareaAutosize]="false"
+            [style.textAlign]="textEditorState.textAlign"
+            [style.direction]="textEditorState.textAlign == 'left' ? 'ltr' : 'rtl'"
+            [style.font-size.px]="textEditorState.fontSize"
+            [style.color]="textEditorState.color"
+            [class.bold]="textEditorState.bold"
+            [class.italic]="textEditorState.italic"
+            [class.underline]="textEditorState.underline"></textarea>
+
   <div class="nicico-text-editor-tool-box">
+
+    <div class="file-box">
+      <nicico-files-upload [files]="files"></nicico-files-upload>
+    </div>
+
     <div class="tool-box-section">
-      <mat-icon class="tool-box-icon" svgIcon="align-left" [class.active]="activeBtn[0]"
+      <mat-icon class="tool-box-icon" svgIcon="align-left"
+                [class.active]="textEditorState.textAlign == 'left'"
                 (click)="formatText(0)"></mat-icon>
-      <mat-icon class="tool-box-icon" svgIcon="align-right" [class.active]="activeBtn[1]"
+      <mat-icon class="tool-box-icon" svgIcon="align-right"
+                [class.active]="textEditorState.textAlign == 'right'"
                 (click)="formatText(1)"></mat-icon>
     </div>
+
     <div class="tool-box-section">
-      <mat-icon class="tool-box-icon" svgIcon="format-list-numbered" [class.active]="activeBtn[2]" (click)="formatText(2)"></mat-icon>
-      <mat-icon class="tool-box-icon" svgIcon="format-list-bulleted" [class.active]="activeBtn[3]" (click)="formatText(3)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-list-numbered"
+                [class.active]="textEditorState.listType == 'numbered'"
+                (click)="formatText(2)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-list-bulleted"
+                [class.active]="textEditorState.listType == 'bulleted'"
+                (click)="formatText(3)"></mat-icon>
     </div>
+
     <div class="tool-box-section">
-      <mat-icon class="tool-box-icon" svgIcon="format-bold" (click)="formatText(4)"></mat-icon>
-      <mat-icon class="tool-box-icon" svgIcon="format-italic" (click)="formatText(5)"></mat-icon>
-      <mat-icon class="tool-box-icon" svgIcon="format-underlined" (click)="formatText(6)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-bold"
+                [class.active]="textEditorState.bold"
+                (click)="formatText(4)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-italic"
+                [class.active]="textEditorState.italic"
+                (click)="formatText(5)"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="format-underlined"
+                [class.active]="textEditorState.underline"
+                (click)="formatText(6)"></mat-icon>
     </div>
+
     <div class="tool-box-section">
-      <mat-icon class="tool-box-icon" svgIcon="format-color-text" (click)="formatText(7)"></mat-icon>
-      <mat-icon class="tool-box-icon" svgIcon="format-size" (click)="formatText(8)"></mat-icon>
+      <input type="color" class="hidden-field"
+             #colorPicker
+             [value]="textEditorState.color"
+             (change)="textEditorState.color = colorPicker.value">
+      <mat-icon class="tool-box-icon" svgIcon="format-color-text"
+                (click)="formatText(7)"
+                [style.color]="textEditorState.color"></mat-icon>
+
+      <mat-icon class="tool-box-icon" svgIcon="format-size"
+                (click)="showPopup=!showPopup">
+      </mat-icon>
+      <div class="fontsize-popup"
+           (mouseleave)="showPopup=false">
+        <div class="fontsize-popup-commands"
+             [class.show]="showPopup">
+          <div (click)="decreaseSize()"> -</div>
+          |
+          <div (click)="increaseSize()"> +</div>
+        </div>
+      </div>
+
     </div>
+
     <div class="tool-box-section">
-      <mat-icon class="tool-box-icon" svgIcon="attachment"></mat-icon>
+      <mat-icon class="tool-box-icon" svgIcon="attachment"
+                (click)="filePicker.click()"></mat-icon>
+      <input type="file" class="hidden-field"
+             #filePicker
+             (change)="filePickerChanged(filePicker?.files)">
     </div>
+
   </div>
+
 </mat-form-field>

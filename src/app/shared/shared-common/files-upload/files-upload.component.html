@@ -1,0 +1,13 @@
+<div *ngFor="let file of files" class="file-item">
+
+  <div class="file-icon">
+    <mat-icon class="tool-box-icon" svgIcon="download"></mat-icon>
+  </div>
+
+  <div class="file-description">
+    {{ displayName(file) }}<br>
+    {{ displaySize(file) }}
+  </div>
+
+</div>
+
