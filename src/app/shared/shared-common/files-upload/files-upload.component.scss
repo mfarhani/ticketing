@@ -1,0 +1,49 @@
+:host {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  direction: rtl;
+  overflow-x: auto;
+}
+
+:host > :not(:last-child) {
+  margin-left: 10px;
+}
+
+.file-item {
+  width: 181px;
+  height: 45px;
+  font-size: small;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+
+  .file-icon {
+    width: 35px;
+    background: #FE9D2A;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    mat-icon {
+      color: white;
+      width: 20px;
+    }
+  }
+
+  .file-description {
+    width: 146px;
+    text-align: left;
+    padding: 5px;
+    direction: ltr;
+    line-height: 18px;
+    background: white;
+    border-radius: 4px 0 0 4px;
+
+  }
+}

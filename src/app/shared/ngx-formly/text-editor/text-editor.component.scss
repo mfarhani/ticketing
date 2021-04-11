@@ -1,10 +1,22 @@
 .nicico-text-editor {
-  height: 165px !important;
   width: 100%;
 
   .nicico-text-editor-text-area {
-    height: 90px;
+    height: 157px;
     font-size: 12px;
+
+    &.bold {
+      font-weight: bold;
+    }
+
+    &.italic {
+      font-style: italic;
+    }
+
+    &.underline {
+      text-decoration: underline;
+    }
+
   }
 
   .nicico-text-editor-tool-box {
@@ -36,14 +48,102 @@
           color: #FE9D2A;
           cursor: pointer;
         }
+
+        &.active {
+          color: #FE9D2A
+        }
+
       }
+
+      .fontsize-popup {
+        position: relative;
+        display: inline-block;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        .fontsize-popup-commands {
+          visibility: hidden;
+          width: 100px;
+          background-color: #cacfd4;
+          color: #000000;
+          text-align: center;
+          border-radius: 6px;
+          padding: 8px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 40px;
+          left: -50px;
+          margin-left: -25px;
+
+          div {
+            width: 40px;
+            display: inline-block;
+            cursor: pointer;
+            font-size: large;
+          }
+        }
+
+        .fontsize-popup-commands::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #cacfd4 transparent transparent transparent;
+        }
+
+        .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+        }
+
+        @-webkit-keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
+      }
+
+      .hidden-field {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        float: left;
+      }
+    }
+
+    .file-box {
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
     }
   }
 
   ::ng-deep {
-    .mat-form-field, .mat-form-field-flex {
-      height: 165px !important;
-      background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 120px, #F5F5F5 120px, #F5F5F5 100%);
+
+    .mat-form-field,
+    .mat-form-field-flex {
+      height: 230px !important;
+      background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) calc(100% - 45px), #F5F5F5 calc(100% - 45px), #F5F5F5 100%);
     }
   }
 }
