@@ -1,11 +1,11 @@
 <mat-form-field appearance="outline" class="nicico-text-editor">
 
-  <mat-label>test</mat-label>
+  <mat-label>{{field?.templateOptions?.label!|translate}}</mat-label>
 
   <textarea rows="4" class="nicico-text-editor-text-area"
             matInput
             #textEditor
-            [placeholder]="key.toString()"
+            [placeholder]="field?.templateOptions?.placeholder!|translate"
             [matTextareaAutosize]="false"
             [style.textAlign]="textEditorState.textAlign"
             [style.direction]="textEditorState.textAlign == 'left' ? 'ltr' : 'rtl'"
@@ -16,11 +16,6 @@
             [class.underline]="textEditorState.underline"></textarea>
 
   <div class="nicico-text-editor-tool-box">
-
-    <div class="file-box">
-      <nicico-files-upload [files]="files"></nicico-files-upload>
-    </div>
-
     <div class="tool-box-section">
       <mat-icon class="tool-box-icon" svgIcon="align-left"
                 [class.active]="textEditorState.textAlign == 'left'"
@@ -82,7 +77,9 @@
              #filePicker
              (change)="filePickerChanged(filePicker?.files)">
     </div>
-
+  </div>
+  <div class="file-box">
+    <nicico-files-upload [files]="files"></nicico-files-upload>
   </div>
 
 </mat-form-field>

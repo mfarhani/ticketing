@@ -3,7 +3,6 @@
   display: flex;
   flex-flow: row nowrap;
   direction: rtl;
-  overflow-x: auto;
 }
 
 :host > :not(:last-child) {
@@ -12,7 +11,7 @@
 
 .file-item {
   width: 181px;
-  height: 45px;
+  height: 35px;
   font-size: small;
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
@@ -39,7 +38,7 @@
   .file-description {
     width: 146px;
     text-align: left;
-    padding: 5px;
+    padding: 0 5px;
     direction: ltr;
     line-height: 18px;
     background: white;
