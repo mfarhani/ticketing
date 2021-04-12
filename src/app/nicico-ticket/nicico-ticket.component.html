@@ -1,3 +1,5 @@
+<div class="nicico-ticketing-wrapper" [class.blur]="menu?.trigger?.menuOpen">
+</div>
 <div class="nicico-ticketing" [class.expanded]="expandBtn" *ngIf="show" (mouseleave)="collapseBtn()">
   <div class="nicico-ticketing-btn-wrapper ticket-btn" *ngIf="!expandBtn"
        (mouseover)="expandBtn=true">
