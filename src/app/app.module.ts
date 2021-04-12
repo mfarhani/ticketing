@@ -12,6 +12,7 @@ import { CommentComponent } from './nicico-ticket/ticket-tracking/comment/commen
 import { TicketTrackingComponent } from './nicico-ticket/ticket-tracking/ticket-tracking.component';
 import { SharedModule } from './shared/shared.module';
 import { CommentCardComponent } from './nicico-ticket/ticket-tracking/comment-card/comment-card.component';
+import { TicketListComponent } from './nicico-ticket/ticket-tracking/ticket-list/ticket-list.component';
 
 export function createTranslateLoader(http: HttpClient): TranslateLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -24,7 +25,8 @@ export function createTranslateLoader(http: HttpClient): TranslateLoader {
     ChatComponent,
     TicketTrackingComponent,
     CommentComponent,
-    CommentCardComponent
+    CommentCardComponent,
+    TicketListComponent
   ],
   entryComponents: [NicicoTicketComponent],
   imports: [

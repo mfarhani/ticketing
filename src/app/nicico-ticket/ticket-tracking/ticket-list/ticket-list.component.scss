@@ -1,0 +1,12 @@
+@import "src/assets/scss/variables";
+
+.ticket-list {
+  height: 740px;
+  background-color: white;
+  width: 216px;
+  position: absolute;
+  left: -235px;
+  bottom: 0;
+  border-radius: 10px;
+  @include primary-shadow;
+}
