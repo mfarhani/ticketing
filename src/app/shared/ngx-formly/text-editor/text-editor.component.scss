@@ -1,158 +1,166 @@
-.nicico-text-editor {
-  width: 100%;
+:host {
+  .nicico-text-editor {
+    width: 100%;
 
-  .nicico-text-editor-text-area {
-    height: 157px;
-    font-size: 12px;
+    .nicico-text-editor-text-area {
+      height: 145px;
+      font-size: 12px;
 
-    &.bold {
-      font-weight: bold;
-    }
-
-    &.italic {
-      font-style: italic;
-    }
-
-    &.underline {
-      text-decoration: underline;
-    }
-
-  }
-
-  .nicico-text-editor-tool-box {
-    margin-top: 10px;
-    height: 45px;
-    position: relative;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    direction: ltr;
-
-    .tool-box-section {
-      padding: 3px 0;
-      justify-content: space-between;
-
-      &:not(:last-child) {
-        border-right: 1px solid rgba(202, 207, 212, .5);
+      &.bold {
+        font-weight: bold;
       }
 
-      &:not(:first-child) {
-        padding-left: 10px;
+      &.italic {
+        font-style: italic;
       }
 
-      .tool-box-icon {
-        margin-right: 15px;
-        color: #cacfd4;
+      &.underline {
+        text-decoration: underline;
+      }
 
-        &:hover {
-          color: #FE9D2A;
-          cursor: pointer;
+    }
+
+    .nicico-text-editor-tool-box {
+      margin-top: 10px;
+      height: 45px;
+      position: relative;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      direction: ltr;
+
+      .tool-box-section {
+        padding: 3px 0;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+          border-right: 1px solid rgba(202, 207, 212, .5);
         }
 
-        &.active {
-          color: #FE9D2A
+        &:not(:first-child) {
+          padding-left: 10px;
         }
 
-      }
+        .tool-box-icon {
+          margin-right: 15px;
+          color: #cacfd4;
 
-      .fontsize-popup {
-        position: relative;
-        display: inline-block;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-
-        .fontsize-popup-commands {
-          visibility: hidden;
-          width: 100px;
-          background-color: #cacfd4;
-          color: #000000;
-          text-align: center;
-          border-radius: 6px;
-          padding: 8px 0;
-          position: absolute;
-          z-index: 1;
-          bottom: 40px;
-          left: -50px;
-          margin-left: -25px;
-
-          div {
-            width: 40px;
-            display: inline-block;
+          &:hover {
+            color: #FE9D2A;
             cursor: pointer;
-            font-size: large;
+          }
+
+          &.active {
+            color: #FE9D2A
+          }
+
+        }
+
+        .fontsize-popup {
+          position: relative;
+          display: inline-block;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+
+          .fontsize-popup-commands {
+            visibility: hidden;
+            width: 100px;
+            background-color: #cacfd4;
+            color: #000000;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 40px;
+            left: -50px;
+            margin-left: -25px;
+
+            div {
+              width: 40px;
+              display: inline-block;
+              cursor: pointer;
+              font-size: large;
+            }
+          }
+
+          .fontsize-popup-commands::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #cacfd4 transparent transparent transparent;
+          }
+
+          .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+          }
+
+          @-webkit-keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
+          }
+
+          @keyframes fadeIn {
+            from {
+              opacity: 0;
+            }
+
+            to {
+              opacity: 1;
+            }
           }
         }
 
-        .fontsize-popup-commands::after {
-          content: "";
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          margin-left: -5px;
-          border-width: 5px;
-          border-style: solid;
-          border-color: #cacfd4 transparent transparent transparent;
-        }
-
-        .show {
-          visibility: visible;
-          -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
-        }
-
-        @-webkit-keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-          }
-
-          to {
-            opacity: 1;
-          }
+        .hidden-field {
+          visibility: hidden;
+          width: 0;
+          height: 0;
+          float: left;
         }
       }
 
-      .hidden-field {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        float: left;
-      }
     }
 
     .file-box {
-      position: absolute;
-      bottom: 60px;
       width: 100%;
+      height: 45px;
+      display: flex;
+      align-items: center;
+    }
+
+    ::ng-deep {
+
+      .mat-form-field,
+      .mat-form-field-flex {
+        height: 230px !important;
+        background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) calc(100% - 45px), #F5F5F5 calc(100% - 45px), #F5F5F5 100%);
+      }
     }
   }
 
   ::ng-deep {
 
-    .mat-form-field,
-    .mat-form-field-flex {
-      height: 230px !important;
-      background: linear-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) calc(100% - 45px), #F5F5F5 calc(100% - 45px), #F5F5F5 100%);
-    }
-  }
-}
-
-::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float {
-  .nicico-text-editor-tool-box + .mat-form-field-label-wrapper {
-    .mat-form-field-label {
-      transform: translateY(-1.1em) scale(.75);
-      width: 133.33333%;
+    .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float {
+      .nicico-text-editor-tool-box + .mat-form-field-label-wrapper {
+        .mat-form-field-label {
+          height: 40px;
+          transform: translateY(-1.1em) scale(.75);
+          width: 133.33333%;
+        }
+      }
     }
   }
 }

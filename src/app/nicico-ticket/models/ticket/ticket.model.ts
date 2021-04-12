@@ -77,11 +77,11 @@ export class Ticket implements ITicket {
         }
       },
       {
-        key: 'textEditor',
+        key: 'description',
         type: 'nicico-text-editor',
         templateOptions: {
-          label: 'text editor',
-          placeholder: 'placeholder',
+          label: 'nicico.ticket.description',
+          placeholder: 'nicico.ticket.description',
           description: 'deactivate',
           required: true
         }

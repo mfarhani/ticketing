@@ -11,7 +11,8 @@
       "groupType": "نوع گروه",
       "type": "نوع",
       "priority": "اولویت",
-      "topic": "موضوع تیکت"
+      "topic": "موضوع تیکت",
+      "description": "توضیحات"
     },
     "error": {
       "required": "پر کردن این فیلد الزامیست"
