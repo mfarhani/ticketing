@@ -12,7 +12,9 @@
       "type": "نوع",
       "priority": "اولویت",
       "topic": "موضوع تیکت",
-      "description": "توضیحات"
+      "description": "توضیحات",
+      "createDate": "تاریخ ایجاد",
+      "status": "وضعیت"
     },
     "error": {
       "required": "پر کردن این فیلد الزامیست"

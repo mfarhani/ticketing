@@ -1,0 +1,16 @@
+<div class="ticket-card" mat-ripple (click)="selectTicket()" [ngClass]="ticket.statusCode||'open'">
+  <div class="triangle"></div>
+  <span class="ticket-card-title">{{ticket.title}}</span>
+  <div class="ticket-info">
+    <span class="ticket-info-label">{{'nicico.ticket.priority'|translate}}:&nbsp;</span>
+    <span class="ticket-info-value">{{ticket.priority}}</span>
+  </div>
+  <div class="ticket-info">
+    <span class="ticket-info-label">{{'nicico.ticket.createDate'|translate}}:&nbsp;</span>
+    <span class="ticket-info-value">{{ticket.createDate}}</span>
+  </div>
+  <div class="ticket-info">
+    <span class="ticket-info-label">{{'nicico.ticket.status'|translate}}:&nbsp;</span>
+    <span class="ticket-info-value">{{ticket.status}}</span>
+  </div>
+</div>

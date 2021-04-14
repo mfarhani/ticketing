@@ -12,5 +12,8 @@ $primary-border-bottom: 1px solid rgba(112, 112, 112, .31);
 
 @mixin primary-shadow-2() {
   box-shadow: 2px 10px 12px rgba(0, 0, 0, .1);
+}
 
+@mixin primary-shadow-3() {
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2) !important;
 }

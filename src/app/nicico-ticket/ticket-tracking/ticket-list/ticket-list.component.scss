@@ -7,6 +7,39 @@
   position: absolute;
   left: -235px;
   bottom: 0;
-  border-radius: 10px;
-  @include primary-shadow;
+  border-radius: 20px;
+  @include primary-shadow-3;
+  direction: rtl;
+
+  .card-list {
+    margin: 3rem 0;
+    height: calc(740px - 6rem);
+    overflow-y: scroll;
+  }
+
+  .arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background: $primary;
+    position: absolute;
+    left: 90px;
+
+    &:first-child {
+      top: -20px;
+    }
+
+    &:last-child {
+      bottom: -20px;
+    }
+
+    .arrow-icon {
+      width: 15px;
+    }
+  }
 }
+

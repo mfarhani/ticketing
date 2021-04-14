@@ -8,11 +8,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ChatComponent } from './nicico-ticket/chat/chat.component';
 import { NicicoTicketComponent } from './nicico-ticket/nicico-ticket.component';
 import { TicketFormComponent } from './nicico-ticket/ticket-form/ticket-form.component';
+import { CommentCardComponent } from './nicico-ticket/ticket-tracking/comment-card/comment-card.component';
 import { CommentComponent } from './nicico-ticket/ticket-tracking/comment/comment.component';
+import { TicketCardComponent } from './nicico-ticket/ticket-tracking/ticket-list/ticket-card/ticket-card.component';
+import { TicketListComponent } from './nicico-ticket/ticket-tracking/ticket-list/ticket-list.component';
 import { TicketTrackingComponent } from './nicico-ticket/ticket-tracking/ticket-tracking.component';
 import { SharedModule } from './shared/shared.module';
-import { CommentCardComponent } from './nicico-ticket/ticket-tracking/comment-card/comment-card.component';
-import { TicketListComponent } from './nicico-ticket/ticket-tracking/ticket-list/ticket-list.component';
 
 export function createTranslateLoader(http: HttpClient): TranslateLoader {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -26,7 +27,8 @@ export function createTranslateLoader(http: HttpClient): TranslateLoader {
     TicketTrackingComponent,
     CommentComponent,
     CommentCardComponent,
-    TicketListComponent
+    TicketListComponent,
+    TicketCardComponent
   ],
   entryComponents: [NicicoTicketComponent],
   imports: [

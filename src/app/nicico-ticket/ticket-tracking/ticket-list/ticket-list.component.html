@@ -1,1 +1,11 @@
-<div class="ticket-list"></div>
+<div class="ticket-list">
+  <button mat-icon-button class="arrow-btn">
+    <mat-icon class="arrow-icon" svgIcon="arrow-up"></mat-icon>
+  </button>
+  <div class="card-list">
+    <nicico-ticket-card *ngFor="let ticket of ticketList" [ticket]="ticket"></nicico-ticket-card>
+  </div>
+  <button mat-icon-button class="arrow-btn">
+    <mat-icon class="arrow-icon" svgIcon="arrow-down"></mat-icon>
+  </button>
+</div>

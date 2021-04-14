@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ModelMapperBase } from '../../services/model-mapper-base';
+import { ModelMapperBase } from '../../../core/services/service/model-mapper-base';
 import { ITicket } from './ticket.interface';
 import { Ticket } from './ticket.model';
 

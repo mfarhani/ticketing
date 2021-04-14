@@ -1,8 +1,8 @@
 import { Type } from '@angular/core';
 import { FormlyFieldConfig } from '@ngx-formly/core';
-import { IBaseModel } from '../../core/base-models/contracts/base-model.interface';
-import { IModelMapper } from '../../core/services/contract/model-mapper.interface';
-import { isPresent, Optional } from '../../core/type-guards/optional';
+import { IBaseModel } from '../../base-models/contracts/base-model.interface';
+import { isPresent, Optional } from '../../type-guards/optional';
+import { IModelMapper } from '../contract/model-mapper.interface';
 
 export abstract class ModelMapperBase<T extends IBaseModel>
   implements IModelMapper<T> {
